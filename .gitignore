@@ -125,3 +125,10 @@ nb-configuration.xml
 /phpunit*.xml
 /.phpunit.*.cache
 
+
+node_modules
+writable
+.htaccess
+composer.lock
+vite.config.js
+spark

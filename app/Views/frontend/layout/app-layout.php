@@ -3,7 +3,7 @@
 
 
 <head>
-    <?= $this->include('frontend/layout/styles/css.php')?>
+    <?= $this->include('frontend/layout/styles/css.php') ?>
 </head>
 
 <body>
@@ -13,21 +13,22 @@
 <!--    <div class="spinner-grow"></div>-->
 <!--</div>-->
 <!-- * Page loading -->
-<!-- App Header -->
+App Header
 <div class="appHeader">
-    <div class="left">
-        <a href="javascript::void();" class="icon goBack">
-            <i class="icon ion-ios-arrow-back"></i>
-        </a>
+    <div class="searchBlock my-2 w-75">
+        <form action="">
+                    <span class="inputIcon">
+                        <i class="icon ion-ios-search"></i>
+                    </span>
+            <input type="text" class="form-control" name="q" id="searchInput" placeholder="Search post...">
+        </form>
     </div>
-    <div class="pageTitle">Search</div>
-    <div class="right"></div>
 </div>
-<!-- * App Header -->
+* App Header
 
 <!-- App Capsule -->
 <div id="appCapsule">
-    <?= $this->renderSection('content')?>
+    <?= $this->renderSection('content') ?>
 </div>
 <!-- appCapsule -->
 

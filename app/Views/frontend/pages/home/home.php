@@ -2,16 +2,6 @@
 <?= $this->section('content') ?>
 <div class="appContent">
 
-    <div class="searchBlock mt-3">
-        <form>
-                    <span class="inputIcon">
-                        <i class="icon ion-ios-search"></i>
-                    </span>
-            <input type="text" class="form-control" id="searchInput" placeholder="Search...">
-        </form>
-    </div>
-
-
     <div class="sectionTitle mt-4 mb-0">
         <div class="text-muted">POPULAR</div>
         <div class="title">

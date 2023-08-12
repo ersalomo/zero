@@ -2,7 +2,8 @@
 
 namespace App\Services\email;
 
-use App\Models\User;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
 
 class EmailService
 {
@@ -23,7 +24,21 @@ class EmailService
             'mail_subject' => 'Reset Password',
             'mail_body' => $mail_body
         ];
-        dd($mail_body);
-        send($emailConfig);
+        self::send($emailConfig);
+    }
+
+    private function send($mailConfig) {
+
+        require 'PHPMailer/src/Exception.php';
+        require 'PHPMailer/src/PHPMailer.php';
+        require 'PHPMailer/src/SMTP.php';
+
+        $mail = new PHPMailer();
+
+        try {
+
+        }catch (Exception $e) {
+
+        }
     }
 }
