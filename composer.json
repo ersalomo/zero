@@ -9,7 +9,8 @@
         "codeigniter4/framework": "^4.0",
         "mihatori/codeignitervite": "^1.1",
         "nesbot/carbon": "^2.68",
-      "ext-openssl": "*"
+      "ext-openssl": "*",
+      "ext-json": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9",

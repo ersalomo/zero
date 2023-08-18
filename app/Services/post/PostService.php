@@ -14,4 +14,9 @@ class PostService implements PostServiceInterface
     {
         return $this->post->findAll();
     }
+
+    public function create(array $data)
+    {
+       return $this->post->insert($data);
+    }
 }

@@ -68,6 +68,8 @@ $routes->group('author', [], static function (RouteCollection $routes) {
 
     $routes->group('posts', static function (RouteCollection $routes) {
         $routes->get('/', [Post::class, 'index'], ['as'=> 'author.post.index']);
+        $routes->get('create', [Post::class, 'create'], ['as'=> 'author.post.create']);
+        $routes->post('store', [Post::class, 'store'], ['as'=> 'author.post.store']);
     });
     $routes->group('authors', static function (RouteCollection $routes) {
         $routes->get('/', [Author::class, 'index'], ['as'=> 'author.author.index']);

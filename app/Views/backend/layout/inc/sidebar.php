@@ -1,3 +1,8 @@
+<?php
+$active_url = explode("/", current_url());
+$active = end($active_url);
+?>
+
 <div class="right-sidebar">
     <div class="sidebar-title">
         <h3 class="weight-600 font-16 text-blue">
@@ -187,7 +192,7 @@
             <ul id="accordion-menu">
                 <li class="dropdown">
                     <a href="<?= route_to('author/dashboard') ?>"
-                        class="dropdown-toggle no-arrow">
+                        class="dropdown-toggle no-arrow <?= $active == 'dashboard' ? 'active' : ''?>">
 								<span class="micon bi bi-house"></span
                                 ><span class="mtext">Dashboard</span>
                     </a>
@@ -199,7 +204,8 @@
                                 ><span class="mtext">Posts</span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="<?= route_to('author.post.index') ?>">Index</a></li>
+                        <li><a class="<?= $active == 'posts' ? 'active' : ''?>" href="<?= route_to('author.post.index') ?>">Index</a></li>
+                        <li><a class="<?= $active == 'create' ? 'active' : ''?>" href="<?= route_to('author.post.create') ?>">Create</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -208,12 +214,12 @@
                                 ><span class="mtext">Authors</span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="<?= route_to('author.author.index') ?>">Index</a></li>
+                        <li><a class="<?= $active == 'authors' ? 'active' : ''?>" href="<?= route_to('author.author.index') ?>">Index</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="" class="dropdown-toggle no-arrow">
+                    <a href="/author/login" class="dropdown-toggle no-arrow">
                         <span class="micon bi bi-power"></span>
                         <span class="mtext">Logout</span>
                     </a>

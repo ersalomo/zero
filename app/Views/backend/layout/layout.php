@@ -3,8 +3,8 @@
 <head>
     <!-- Basic Page Info -->
     <meta charset="utf-8"/>
-    <title><?= $pageTitle ?? 'Welcome Admin'?></title>
-
+    <title><?= $pageTitle ?? 'Welcome Admin' ?></title>
+    <meta content="<?= csrf_hash() ?>" name="<?= csrf_token() ?>" class="csrf"/>
     <?= $this->include('backend/layout/styles/css.php') ?>
 
 </head>
@@ -27,10 +27,18 @@
 
 <div class="mobile-menu-overlay"></div>
 <div class="main-container">
-    <?=$this->renderSection('content') ?>
+    <?= $this->renderSection('content') ?>
 </div>
 
 </body>
 <?= $this->include('backend/layout/styles/js.php') ?>
+<script>
+    //$.ajaxSetup({
+    //    headers: {
+    //        'X-CSRF-TOKEN': "<?php //= csrf_token()?>//"
+    //    }
+    //})
+</script>
+<?= $this->renderSection('script') ?>
 
 </html>

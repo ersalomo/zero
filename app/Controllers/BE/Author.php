@@ -12,4 +12,5 @@ class Author extends BaseController
             'pageTitle' => 'All Authors'
         ]);
     }
+
 }
